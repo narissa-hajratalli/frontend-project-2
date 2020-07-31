@@ -1,4 +1,4 @@
-# Project Proposal - F
+# Project Proposal - Frontend Development
 
 ## Project Schedule
 
@@ -78,6 +78,7 @@ For the frontend application, I plan to have a list of facts relating to discrim
 | Button to delete your previous comment, but keeps provider information in the database (delete) | 1.5 hrs | H | -hr  | -hr |
 | Add list of health disparity facts to the homepage | 4 hrs | H | -hr  | -hr |
 | Deployment | 30 mins | H | -hr  | -hr |
+| Total | 41.5 hrs | 27.5 hrs | -hr | -hr |
 
 #### Post MVP
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
@@ -87,3 +88,4 @@ For the frontend application, I plan to have a list of facts relating to discrim
 | Have comments section have a timestamp so users know what date a comment was submitted | 2 hrs | M | -hr | -hr |
 | Have a "last edited" section for each provider's profile so users know if information is up to date | 1.5 hrs | L | -hr | -hr |
 | Include mental health resources and resources to report biases | 1.5 hrs | L | -hr | -hr |
+| Total | - | 9.5 hrs | -hr | -hr |
