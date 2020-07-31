@@ -26,21 +26,21 @@ For the frontend application, I plan to have a list of facts relating to discrim
 
 |Deliverable	| Status	| Time Spent |
 | --- | :---: |  :---: | 
-| Day 1: Thurs, July 30th | Project Proposal	| Incomplete |  |
-| Day 2: Fri, July 31st, 2020 | Research & Development	| Incomplete	|  |
-| Day 3: Sat, August 1st, 2020 | Backend: Build server & create Mongoose models | Incomplete |  |
-| Day 4: Sun, August 2nd, 2020 | Backend: Complete backend, deployment, and test with Postman | Incomplete | |
-| Day 5: Mon, August 3rd, 2020 | Backend: Basic frontend build & have frontend consume API | Incomplete | |
-| Day 6: Tues, August 4th, 2020 | Frontend: Frontend build (mobile first) | Incomplete | |
-| Day 7: Wed, August 5th, 2020 | Frontend: Hamburger menu and deploy | Incomplete | |
-| Day 8: Tues, August 6th, 2020 | Frontend: Cross-browser testing and final touches  | Incomplete | |
-| Day 9: Tues, August 7th, 2020 | Presentation | Incomplete | |
+| Day 1: Thurs, July 30th | Project Proposal	| Incomplete | -hr |
+| Day 2: Fri, July 31st, 2020 | Research & Development	| Incomplete	| -hr |
+| Day 3: Sat, August 1st, 2020 | Backend: Build server & create Mongoose models | Incomplete | -hr |
+| Day 4: Sun, August 2nd, 2020 | Backend: Complete backend, deployment, and test with Postman | Incomplete | -hr |
+| Day 5: Mon, August 3rd, 2020 | Backend: Basic frontend build & have frontend consume API | Incomplete | -hr |
+| Day 6: Tues, August 4th, 2020 | Frontend: Frontend build (mobile first) | Incomplete | -hr |
+| Day 7: Wed, August 5th, 2020 | Frontend: Hamburger menu and deploy | Incomplete | -hr |
+| Day 8: Tues, August 6th, 2020 | Frontend: Cross-browser testing and final touches  | Incomplete | -hr |
+| Day 9: Tues, August 7th, 2020 | Presentation | Incomplete | -hr |
 
 
 ## MVP/Post MVP
 
 #### MVP
-- 
+- Create frontend with HTML, CSS, and jQuery 
 
 
 #### Post MVP
