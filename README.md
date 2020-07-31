@@ -88,4 +88,4 @@ For the frontend application, I plan to have a list of facts relating to discrim
 | Have comments section have a timestamp so users know what date a comment was submitted | 2 hrs | M | -hr | -hr |
 | Have a "last edited" section for each provider's profile so users know if information is up to date | 1.5 hrs | L | -hr | -hr |
 | Include mental health resources and resources to report biases | 1.5 hrs | L | -hr | -hr |
-| Total | - | 9.5 hrs | -hr | -hr |
+| Total | 9.5 hrs |  | -hr | -hr |
