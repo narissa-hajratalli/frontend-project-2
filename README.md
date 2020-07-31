@@ -77,7 +77,7 @@ For the frontend application, I plan to have a list of facts relating to discrim
 | Button to update provider information, but not a previous comment (update) | 3 hrs | H | -hr  | -hr |
 | Button to delete your previous comment, but keeps provider information in the database (delete) | 1.5 hrs | H | -hr  | -hr |
 | Deployment | 30 mins | H | -hr  | -hr |
-| Total | 37.5 hrs | 27.5 hrs | -hr | -hr |
+| Total | 37.5 hrs | -hr | -hr | -hr |
 
 #### Post MVP
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
@@ -87,4 +87,4 @@ For the frontend application, I plan to have a list of facts relating to discrim
 | Have comments section have a timestamp so users know what date a comment was submitted | 2 hrs | M | -hr | -hr |
 | Have a "last edited" section for each provider's profile so users know if information is up to date | 1.5 hrs | L | -hr | -hr |
 | Include mental health resources and resources to report biases | 1.5 hrs | L | -hr | -hr |
-| Total | 9.5 hrs |  | -hr | -hr |
+| Total | 9.5 hrs | -hr | -hr | -hr |
