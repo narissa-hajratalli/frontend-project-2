@@ -41,9 +41,23 @@ For the frontend application, I plan to have a list of facts relating to discrim
 
 #### MVP
 - Create frontend with HTML, CSS, and jQuery 
+- Use JQuery and leverage the backend API
+- Communicate with the back-end API RESTfully to Create, Read, Update, and Destroy resources
+- Cross-browser responsiveness
+- Hamburger menu 
+- Dropdown menu containing list of providers (read)
+- Button to add provider information and submit a comment (create)
+- Button to update provider information, but not a previous comment (update)
+- Button to delete your previous comment, but keeps provider information in the database (delete)
+- Add list of health disparity facts to the homepage 
+- Deployment
+- Debugging
+- Learn Bootstrap
 
 
 #### Post MVP
+- Create a separate page for each provider with their name, specialty, degree, location, and if they accept Medicaid (render in another page, not the homepage)
+- Softscroll on the webpage
 - 
 
 
