@@ -1,4 +1,4 @@
-# Project Proposal
+# Project Proposal - F
 
 ## Project Schedule
 
@@ -41,8 +41,7 @@ For the frontend application, I plan to have a list of facts relating to discrim
 
 #### MVP
 - Create frontend with HTML, CSS, and jQuery 
-- Use JQuery and leverage the backend API
-- Communicate with the back-end API RESTfully to Create, Read, Update, and Destroy resources
+- Use jQuery and leverage the backend API
 - Cross-browser responsiveness
 - Hamburger menu 
 - Dropdown menu containing list of providers (read)
@@ -58,18 +57,33 @@ For the frontend application, I plan to have a list of facts relating to discrim
 #### Post MVP
 - Create a separate page for each provider with their name, specialty, degree, location, and if they accept Medicaid (render in another page, not the homepage)
 - Softscroll on the webpage
-- 
-
+- Have comments section have a timestamp so users know what date a comment was submitted
+- Have a "last edited" section for each provider's profile so users know if information is up to date
+- Include mental health resources and resources to report biases
 
 ## Functional Components
 
 #### MVP
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-|  |  |  |  |  |
-
+| Create frontend with HTML, CSS, and jQuery  | 6 hrs | H | -hr  | -hr |
+| Add list of health disparity facts to the homepage  | 2 hrs | H | -hr  | -hr |
+| Use JQuery and leverage the backend API  | 6 hrs | H | -hr  | -hr |
+| Learn Bootstrap and use for CSS build  | 6 hrs | H | -hr  | -hr |
+| Cross-browser responsiveness | 6 hrs | H | -hr  | -hr |
+| Hamburger | 2 hrs | H | -hr  | -hr |
+| Button to add provider information and submit a comment (create) | 1.5 hrs | H | -hr  | -hr |
+| Dropdown menu containing list of providers (read) | 3 hrs | H | -hr  | -hr |
+| Button to update provider information, but not a previous comment (update) | 3 hrs | H | -hr  | -hr |
+| Button to delete your previous comment, but keeps provider information in the database (delete) | 1.5 hrs | H | -hr  | -hr |
+| Add list of health disparity facts to the homepage | 4 hrs | H | -hr  | -hr |
+| Deployment | 30 mins | H | -hr  | -hr |
 
 #### Post MVP
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-|  |  |  |  |  |
+| Render provider information and comments in a new page | 3 hrs | M | -hr | -hr |
+| Softscroll on the webpage | 1.5 hrs | M | -hr | -hr |
+| Have comments section have a timestamp so users know what date a comment was submitted | 2 hrs | M | -hr | -hr |
+| Have a "last edited" section for each provider's profile so users know if information is up to date | 1.5 hrs | L | -hr | -hr |
+| Include mental health resources and resources to report biases | 1.5 hrs | L | -hr | -hr |
