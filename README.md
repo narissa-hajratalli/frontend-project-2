@@ -4,8 +4,8 @@
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Day 1| Project Description | Incomplete
-|Day 1| Wireframes / Priority Matrix / Timeline `backend` and `frontend`| Incomplete
+|Day 1| Project Description | Complete
+|Day 1| Wireframes / Priority Matrix / Timeline `backend` and `frontend`| Complete
 |Day 2| Working RestAPI | Incomplete
 |Day 3| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |Day 4| MVP & Bug Fixes | Incomplete
@@ -26,7 +26,7 @@ For the frontend application, I plan to have a list of facts relating to discrim
 
 |Deliverable	| Status	| Time Spent |
 | --- | :---: |  :---: | 
-| Day 1: Thurs, July 30th | Project Proposal	| Incomplete | -hr |
+| Day 1: Thurs, July 30th | Project Proposal	| Complete | 8 hrs |
 | Day 2: Fri, July 31st, 2020 | Research & Development	| Incomplete	| -hr |
 | Day 3: Sat, August 1st, 2020 | Backend: Build server & create Mongoose models | Incomplete | -hr |
 | Day 4: Sun, August 2nd, 2020 | Backend: Complete backend, deployment, and test with Postman | Incomplete | -hr |
