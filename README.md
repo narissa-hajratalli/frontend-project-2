@@ -17,9 +17,9 @@ The purpose of this project is to create a full CRUD application to review diffe
 For the frontend application, I plan to have a list of facts relating to discrimination in the healthcare industry. I also plan to have a dropdown menu containing provider's names and a "Submit a Complaint" button that allows the user to create a new comment. I will also have an button so that the user can only edit the entered provider's information (not their previous comment). Finally, there will be an option to delete a comment. The providers and their respective comments will appear in a list format. 
 
 ## Wireframes
-- [Desktop]()
-- [iPad]()
-- [Mobile]()
+- [Desktop](https://res.cloudinary.com/ds7vqqwb8/image/upload/v1596213047/Project%202%20-%20CRUD%20Application/Desktop_rdzv6l.png)
+- [iPad](https://res.cloudinary.com/ds7vqqwb8/image/upload/v1596213047/Project%202%20-%20CRUD%20Application/iPad_tagpy3.png)
+- [Mobile](https://res.cloudinary.com/ds7vqqwb8/image/upload/v1596213047/Project%202%20-%20CRUD%20Application/Mobile_tyb7wj.png)
 
 ## Time/Priority Matrix 
 - [Graphic](https://res.cloudinary.com/ds7vqqwb8/image/upload/v1596211308/Project%202%20-%20CRUD%20Application/IMG_1037_xcl0mo.jpg)
@@ -55,7 +55,7 @@ For the frontend application, I plan to have a list of facts relating to discrim
 
 
 #### Post MVP
-- Create a separate page for each provider with their name, specialty, degree, location, and if they accept Medicaid (render in another page, not the homepage)
+- Empty page to render provider name, specialty, degree, location, and if they accept Medicaid (render in another page, not the homepage)
 - Softscroll on the webpage
 - Have comments section have a timestamp so users know what date a comment was submitted
 - Have a "last edited" section for each provider's profile so users know if information is up to date
@@ -82,7 +82,7 @@ For the frontend application, I plan to have a list of facts relating to discrim
 #### Post MVP
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Render provider information and comments in a new page | 3 hrs | M | -hr | -hr |
+| Empty page to render provider information | 3 hrs | M | -hr | -hr |
 | Softscroll on the webpage | 1.5 hrs | M | -hr | -hr |
 | Have comments section have a timestamp so users know what date a comment was submitted | 2 hrs | M | -hr | -hr |
 | Have a "last edited" section for each provider's profile so users know if information is up to date | 1.5 hrs | L | -hr | -hr |
