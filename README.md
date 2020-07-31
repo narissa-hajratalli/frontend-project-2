@@ -68,7 +68,7 @@ For the frontend application, I plan to have a list of facts relating to discrim
 | --- | :---: |  :---: | :---: | :---: |
 | Create frontend with HTML, CSS, and jQuery  | 6 hrs | H | -hr  | -hr |
 | Add list of health disparity facts to the homepage  | 2 hrs | H | -hr  | -hr |
-| Use JQuery and leverage the backend API  | 6 hrs | H | -hr  | -hr |
+| Use jQuery and leverage the backend API  | 6 hrs | H | -hr  | -hr |
 | Learn Bootstrap and use for CSS build  | 6 hrs | H | -hr  | -hr |
 | Cross-browser responsiveness | 6 hrs | H | -hr  | -hr |
 | Hamburger | 2 hrs | H | -hr  | -hr |
@@ -76,7 +76,6 @@ For the frontend application, I plan to have a list of facts relating to discrim
 | Dropdown menu containing list of providers (read) | 3 hrs | H | -hr  | -hr |
 | Button to update provider information, but not a previous comment (update) | 3 hrs | H | -hr  | -hr |
 | Button to delete your previous comment, but keeps provider information in the database (delete) | 1.5 hrs | H | -hr  | -hr |
-| Add list of health disparity facts to the homepage | 4 hrs | H | -hr  | -hr |
 | Deployment | 30 mins | H | -hr  | -hr |
 | Total | 41.5 hrs | 27.5 hrs | -hr | -hr |
 
