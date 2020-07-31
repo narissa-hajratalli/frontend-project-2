@@ -55,7 +55,7 @@ For the frontend application, I plan to have a list of facts relating to discrim
 
 
 #### Post MVP
-- Create a separate page for each provider with their name, specialty, degree, location, and if they accept Medicaid (render in another page, not the homepage)
+- Empty page to render provider name, specialty, degree, location, and if they accept Medicaid (render in another page, not the homepage)
 - Softscroll on the webpage
 - Have comments section have a timestamp so users know what date a comment was submitted
 - Have a "last edited" section for each provider's profile so users know if information is up to date
@@ -82,7 +82,7 @@ For the frontend application, I plan to have a list of facts relating to discrim
 #### Post MVP
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Render provider information and comments in a new page | 3 hrs | M | -hr | -hr |
+| Empty page to render provider information | 3 hrs | M | -hr | -hr |
 | Softscroll on the webpage | 1.5 hrs | M | -hr | -hr |
 | Have comments section have a timestamp so users know what date a comment was submitted | 2 hrs | M | -hr | -hr |
 | Have a "last edited" section for each provider's profile so users know if information is up to date | 1.5 hrs | L | -hr | -hr |
