@@ -22,7 +22,7 @@ For the frontend application, I plan to have a list of facts relating to discrim
 - [Mobile]()
 
 ## Time/Priority Matrix 
-- [Graphic]()
+- [Graphic](https://res.cloudinary.com/ds7vqqwb8/image/upload/v1596211308/Project%202%20-%20CRUD%20Application/IMG_1037_xcl0mo.jpg)
 
 |Deliverable	| Status	| Time Spent |
 | --- | :---: |  :---: | 
