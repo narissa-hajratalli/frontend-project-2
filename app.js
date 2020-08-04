@@ -16,7 +16,7 @@ const URL = deployedURL ? deployedURL : "http://localhost:3000"; //this is a ter
 const $providerInput = $('#show-provider-dropdown');
 const $providerSelect = $('#show-selected');
 const $providerShow = $('.provider-info')
-const providers = document.querySelector('.gifs')
+const $submit = $('#submit')
 
 //////////////////////////////
 //FUNCTIONS
@@ -33,7 +33,6 @@ const getProvider = async () => {
     data.forEach((provider) => {
         const $option = $('<option>').attr("value", provider._id).text(`${provider.firstName} ${provider.lastName}, ${provider.providerType}`);
         $providerSelect.append($option);
-        return $option
     });
     
 };
