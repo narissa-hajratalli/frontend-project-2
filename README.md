@@ -68,7 +68,7 @@ For the frontend application, I plan to have a list of facts relating to discrim
 | Create frontend with HTML, CSS, and jQuery  | 6 hrs | H | -hr  | -hr |
 | Add list of health disparity facts to the homepage  | 2 hrs | H | -hr  | -hr |
 | Use jQuery and leverage the backend API  | 6 hrs | H | -hr  | -hr |
-| Learn Bootstrap and use for CSS build  | 6 hrs | H | -hr  | -hr |
+| Learn Bootstrap and use for CSS build  | 6 hrs | H | 1.5 hrs  | -hr |
 | Cross-browser responsiveness | 6 hrs | H | -hr  | -hr |
 | Hamburger | 2 hrs | H | -hr  | -hr |
 | Button to add provider information and submit a comment (create) | 1.5 hrs | H | -hr  | -hr |
