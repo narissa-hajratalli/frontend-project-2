@@ -39,14 +39,18 @@ const getProvider = async () => {
 
 ///////////////////////////////////////////////////////////////////////////////////////
 
-//READ - Getting provider info and their comments to show on the screen when you click the "Find Provider" button
-//This is for the button click for the 
+//----READ - Getting provider info and their comments to show on the screen when you click the "Find Provider" button-----
 
-$('#find-button').click(async (provider) => {
+//Function for the "Find Provider" button click
+$('#find-button').click(async (providerData) => {
+    //Defining variables for this function
     const providerIdValue = $('#show-selected').val();
+
+    //Fetch request for grabbing the data at a certain endpoint
     const response = await fetch(`${URL}/providers/${providerIdValue}`);
     console.log(response);
 
+    //Defining the data
     const data = await response.json();
     console.log(data);
 
@@ -55,9 +59,10 @@ $('#find-button').click(async (provider) => {
     const $specialty =  $('<li>').text(data.specialty);
     const $medicaid =  $('<li>').text(`Accepts Medicaid: ${data.acceptsMedicaid}`);
 
+    //Empties the div so we don't have duplicate provider information on the screen
     $('#provider-info-ul').empty();
     
-    //Empty old items, append new items
+    //Appending items
     $('#provider-info-ul').append($picture);
     $('#provider-info-ul').append($title);
     $('#provider-info-ul').append($specialty);
@@ -69,10 +74,39 @@ $('#find-button').click(async (provider) => {
         console.log(comment)
         $('#provider-info-ul').append($comment)
     })
-
-
     // console.log($firstName)
     // console.log(data.firstName)
+})
+
+//------------- CREATE - ADDING A NEW PROVIDER --------------
+
+//Function for adding a new provider when the "Submit" button is pressed
+$('#submit').click(async (provider) => {
+    $('#show-provider-dropdown').empty()
+
+    //Object containing all new provider information that is input
+    const newProvider = {
+        firstName : $('#first-name').val(),
+        lastName : $('#last-name').val(),
+        providerType : $('#provider-type').val(),
+        specialty : $('#specialty').val(),
+    }
+
+    //Fetch request for grabbing the data at a certain endpoint
+    const response = await fetch((`${URL}/providers`), {
+        method: "post",
+        headers: {
+            "Content-Type" : "application/json"
+        },
+        body: JSON.stringify(newProvider)
+    })
+
+    console.log(response);
+
+    const data = await response.json()
+    console.log(data)
+
+    getProvider();
 })
 
 

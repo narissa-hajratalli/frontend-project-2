@@ -23,7 +23,7 @@
 <!----------READ - SHOW INDIVIDUAL PROVIDERS WHEN CHOSEN FROM THE DROPDOWN------>
   <!----------DROPDOWN------>  
     <div class="search-form">
-        <h3>Search Providers</h3>
+        <h3>Search Providers and Add a Comment</h3>
             <input type="hidden" name=name id="show-provider-dropdown"/>
                 <select name="provider" id="show-selected">
                     <option>--Find Reviews--</option>
@@ -40,11 +40,11 @@
   <div id="report-bias">
   
   <!--HEADING-->
-    <h5>Report Bias</h5>
+    <h5>Don't see a provider? Add a new one</h5>
 
   <!-- BUTTON TRIGGER MODAL -->
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Report Bias
+        Add provider
     </button>
 
   <!-- MODAL -->
@@ -73,10 +73,6 @@
               <div id="specialty-input">
                 <label for="specialty">Specialty</label>
                 <input id="specialty" type="text" class="validate">
-              </div>
-              <div id="comment-input">
-                <label for="comment">Comment</label>
-                <input id="comment" type="text" class="validate">
               </div>
             </div>
             <div class="modal-footer">
