@@ -44,19 +44,36 @@ const getProvider = async () => {
 //This is for the button click for the 
 
 $('#find-button').click(async (provider) => {
-    const providerIdValue = $('#show-selected').val()
-    const response = await fetch(`${URL}/providers/${providerIdValue}`)
-    console.log(response)
+    const providerIdValue = $('#show-selected').val();
+    const response = await fetch(`${URL}/providers/${providerIdValue}`);
+    console.log(response);
 
-    const data = await response.json()
-    console.log(data)
+    const data = await response.json();
+    console.log(data);
 
-    const $firstName = $('<li>').text(data.firstName);
-    $('#provider-info-ul').empty()
-    $('#provider-info-ul').append($firstName)
+    const $picture = $('<li>').text(data.picture)
+    const $title = $('<li>').text(`${data.firstName} ${data.lastName}, ${data.providerType}`);
+    const $specialty =  $('<li>').text(data.specialty);
+    const $medicaid =  $('<li>').text(`Accepts Medicaid: ${data.acceptsMedicaid}`);
+
+    $('#provider-info-ul').empty();
     
-    console.log($firstName)
-    console.log(data.firstName)
+    //Empty old items, append new items
+    $('#provider-info-ul').append($picture);
+    $('#provider-info-ul').append($title);
+    $('#provider-info-ul').append($specialty);
+    $('#provider-info-ul').append($medicaid);
+    
+    //Looping over the keys in the 'comments' object
+    data.comments.forEach((comment) => {
+        const $comment = $('<li>').text(`${comment.comment} -${comment.commenterName}`);
+        console.log(comment)
+        $('#provider-info-ul').append($comment)
+    })
+
+
+    // console.log($firstName)
+    // console.log(data.firstName)
 })
 
 

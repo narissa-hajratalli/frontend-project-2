@@ -7,13 +7,12 @@ h1 {
 }
 
 
-ul {
+.navbar {
     text-align: center;
-    display: flex;
-    justify-content: space-evenly;
     list-style-type: none;
 }
 
-.provider-info {
-    border: 1px, solid, blue;
+#provider-info-ul {
+    list-style-type: none;
+    text-align: center
 }
