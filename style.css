@@ -13,3 +13,7 @@ ul {
     justify-content: space-evenly;
     list-style-type: none;
 }
+
+.provider-info {
+    border: 1px, solid, blue;
+}
