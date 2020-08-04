@@ -16,6 +16,7 @@ const URL = deployedURL ? deployedURL : "http://localhost:3000"; //this is a ter
 const $providerInput = $('#show-provider-dropdown');
 const $providerSelect = $('#show-selected');
 const $providerShow = $('.provider-info')
+const providers = document.querySelector('.gifs')
 
 //////////////////////////////
 //FUNCTIONS
@@ -37,36 +38,29 @@ const getProvider = async () => {
     
 };
 
-console.log(getProvider)
-
 ///////////////////////////////////////////////////////////////////////////////////////
 
 //READ - Getting provider info and their comments to show on the screen when you click the "Find Provider" button
-$('#find-button').click(async function(){
-    // alert( "Handler for .click() called." );
-    //API call
-    const response = await fetch(`${URL}/providers`); //Setting response to the provider route
-    const data = await response.json(); //grabbing the JSON data
+//This is for the button click for the 
 
-    //Populate the div with provider information
-    data.forEach((provider) => {
-        const $info = $('<li>').text(`${provider.firstName} ${provider.lastName}, ${provider.providerType}`);
-        $providerShow.append($info);
-    })
+$('#find-button').click(async (provider) => {
+    const providerIdValue = $('#show-selected').val()
+    const response = await fetch(`${URL}/providers/${providerIdValue}`)
+    console.log(response)
+
+    const data = await response.json()
+    console.log(data)
+
+    const $firstName = $('<li>').text(data.firstName);
+    $('#provider-info-ul').empty()
+    $('#provider-info-ul').append($firstName)
+    
+    console.log($firstName)
+    console.log(data.firstName)
 })
-
-
-// IF $option is equal to $info
-
-
-
-
-
 
 
 ////////////////////////////////
 // Main Application Logic
 ////////////////////////////////
 getProvider() //showing providers in the dropdown menu
-//showProvider() //showing provider info and their comments
-//cre

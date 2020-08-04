@@ -44,3 +44,37 @@
 
 //     console.log("hello")
 // })
+
+
+//----------------------------------
+//On change dropdown menu function
+//READ - Getting provider info and their comments to show on the screen when you click the "Find Provider" button
+//THIS IS FOR ON CLICK
+
+// $('#show-selected').change(async (event) => {
+//     // alert( "Handler for .change() called." );
+//     //API call
+//     const providerIdValue = $('#show-selected').val()
+//     // console.log(providerIdValue)
+
+//     //Send value to the button
+//     $('#find-button').attr("value", providerIdValue);
+// })
+
+// $('#find-button').click(async (provider) => {
+//     const providerIdValue = $('#show-selected').val()
+//     const response = await fetch(`${URL}/providers/${providerIdValue}`)
+//     console.log(response)
+
+//     const data = await response.json()
+//     console.log(data)
+
+//     const $firstName = $('<li>').text(data.firstName);
+//     $('#provider-info-ul').empty()
+//     $('#provider-info-ul').append($firstName)
+//     console.log($firstName)
+//     console.log(data.firstName)
+
+//     // const $firstName = $('<li>').text($('#find-button').val(data.firstName))
+
+// })
