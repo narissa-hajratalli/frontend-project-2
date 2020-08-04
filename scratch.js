@@ -40,7 +40,7 @@
 //   });
 
 
-const findClick = () => (click, () => {
-    
-    console.log("hello")
-})
+// const findClick = () => (click, () => {
+
+//     console.log("hello")
+// })
