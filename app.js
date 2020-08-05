@@ -74,6 +74,7 @@ $('#find-button').click(async () => {
     //Looping over the keys in the 'comments' object
     data.comments.forEach((comment, i) => {
         const $comment = $('<li>').text(`${comment.comment} -${comment.commenterName}`).attr('value', comment._id);
+        $('#provider-info-ul').append($comment)
 
         $comment.addClass('comment-to-delete')
 
@@ -81,11 +82,10 @@ $('#find-button').click(async () => {
 
         $('#delete-button').attr("value", data.comments._id)
         // console.log(data._id)
-        const $deleteButton = $("<button>").text('Delete').addClass("btn btn-danger").attr('type','button').attr('id','delete-button').attr('value', commen._id)
+        const $deleteButton = $("<button>").text('Delete').addClass("btn btn-danger delete-button").attr('type','button').attr('value', comment._id)
         $(".comment-to-delete").eq(i).append($deleteButton)
         
         console.log(comment)
-        $('#provider-info-ul').append($comment)
     })
 
      //Adding delete buttons next to each comment
@@ -244,43 +244,19 @@ $('#create-comment').click(async () => {
 
 //------------- DELETE - ADDING A NEW COMMENT --------------
 
-//API call to get the comment ids to populate with each comment
-// const getComment = async () => {
-//     //API call
-//     const response = await fetch(`${URL}/comments`); //Setting response to the provider route
-//     const data = await response.json(); //grabbing the JSON data
-
-//     //Looping through all the comments in the data set
-//     data.forEach((comment) => {
-//         $('.comment-to-delete').attr("value", comment._id)
-//     });
-
-//     //This empties out the div containg the provider information
-//     // $('#provider-info-ul').empty();
-    
-// };
-
-
-//On change event to change the delete button's value to match the comment's id
-// $('#show-selected').change(async () => {
-//     const providerIdValue = $('#show-selected').val();
-//     $('#delete-button').attr('value', providerIdValue);
-//     console.log($('#delete-button').val())
-// })
-
 //Function to delete the comment
-$('#delete-button').click( async () => {
+$('.delete-button').click( async () => {
     console.log('hi')
-    const deleteButtonValue = $('#delete-button').val($('#show-selected'));
-    console.log(deleteButtonValue)
+    // const deleteButtonValue = $('.delete-button').val();
+    // console.log(deleteButtonValue)
 
-    const response = await fetch(`${URL}/rat/${deleteButtonValue}`, {
-      method: "delete"
-    })
-    
-    getProvider() 
+    // const response = await fetch(`${URL}/rat/${deleteButtonValue}`, {
+    //   method: "delete"
+    // })
 })
-  
+
+const deleteButtonValue = $('.delete-button').val();
+    console.log(deleteButtonValue)
 
 
 ////////////////////////////////
