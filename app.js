@@ -78,6 +78,10 @@ $('#find-button').click(async (providerData) => {
         $comment.addClass('comment-to-delete')
         $('#provider-info-ul').append($comment)
     })
+
+    //Adding delete buttons next to each comment
+    $(".comment-to-delete").append($("<button>").text('Delete').addClass("btn btn-danger").attr('type','button'))
+
     // console.log($firstName)
     // console.log(data.firstName)
 })
@@ -135,6 +139,7 @@ $('#show-selected').change(async () => {
 
 //Function to click the submit button
 $('#update').click(async (provider) => {
+
 //Mirroring the provider schema again with the elements associated with the update modal
     const editProvider = {
         firstName : $('#first-name-2').val(),
@@ -216,9 +221,6 @@ $('#create-comment').click(async () => {
     //Push the new comment and their name into the comment array
     dataComment.comment.forEach((comment) => {
         dataProvider.comments.push(comment);
-        const $deleteButton = $("<button>").text('DELETE');
-        $('.comment-to-delete').append($("<button>"));
-        ($deleteButton).attr("type", "button")
     })
 })
 
