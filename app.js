@@ -45,7 +45,7 @@ const getProvider = async () => {
 //----READ - Getting provider info and their comments to show on the screen when you click the "Find Provider" button-----
 
 //Function for the "Find Provider" button click
-$('#find-button').click(async (providerData) => {
+$('#find-button').click(async () => {
     //Defining variables for this function
     const providerIdValue = $('#show-selected').val();
 
@@ -80,7 +80,8 @@ $('#find-button').click(async (providerData) => {
     })
 
     //Adding delete buttons next to each comment
-    $(".comment-to-delete").append($("<button>").text('Delete').addClass("btn btn-danger").attr('type','button'))
+    $(".comment-to-delete").append($("<button>").text('Delete').addClass("btn btn-danger").attr('type','button').attr('id','delete-button'))
+
 
     // console.log($firstName)
     // console.log(data.firstName)
@@ -138,7 +139,7 @@ $('#show-selected').change(async () => {
 })
 
 //Function to click the submit button
-$('#update').click(async (provider) => {
+$('#update').click(async () => {
 
 //Mirroring the provider schema again with the elements associated with the update modal
     const editProvider = {
@@ -150,11 +151,11 @@ $('#update').click(async (provider) => {
     console.log(editProvider);
 
     
-    const buttonValue = $('#update').val();
+    const updateButtonValue = $('#update').val();
 
 
     //Fetch request for grabbing the data at a certain endpoint
-    const response = await fetch((`${URL}/providers/${buttonValue}`), {
+    const response = await fetch((`${URL}/providers/${updateButtonValue}`), {
         method: "put",
         headers: {
             "Content-Type" : "application/json"
@@ -222,18 +223,33 @@ $('#create-comment').click(async () => {
     dataComment.comment.forEach((comment) => {
         dataProvider.comments.push(comment);
     })
+
+    $('#comment').val("");
+    $('#commenter').val("");
 })
 
 ///////////////////////////////////////////////////////////////////////////////////////
 
 //------------- DELETE - ADDING A NEW COMMENT --------------
-// const deleteComment = async (event) => {
 
-//     const response = await fetch(`${URL}/rat/${event.target.id}`, {
-//       method: "delete"
-//     })
+//On change event to change the delete button's value to match the selected provider's ID
+// $('#show-selected').change(async () => {
+//     const providerIdValue = $('#show-selected').val();
+//     $('#delete-button').attr('value', providerIdValue);
+// })
+
+//Function to delete the comment
+$('#delete-button').click( async () => {
+    console.log('hi')
+    const deleteButtonValue = $('#delete-button').val($('#show-selected'));
+    console.log(deleteButtonValue)
+
+    const response = await fetch(`${URL}/rat/${deleteButtonValue}`, {
+      method: "delete"
+    })
     
-//   }
+    getProvider() 
+  })
   
 
 
