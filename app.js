@@ -75,11 +75,13 @@ $('#find-button').click(async (providerData) => {
     data.comments.forEach((comment) => {
         const $comment = $('<li>').text(`${comment.comment} -${comment.commenterName}`);
         console.log(comment)
+        $comment.addClass('comment-to-delete')
         $('#provider-info-ul').append($comment)
     })
     // console.log($firstName)
     // console.log(data.firstName)
 })
+
 ///////////////////////////////////////////////////////////////////////////////////////
 
 //------------- CREATE - ADDING A NEW PROVIDER --------------
@@ -123,41 +125,31 @@ $('#submit').click(async () => {
 })
 
 ///////////////////////////////////////////////////////////////////////////////////////
-
 //---- UPDATE - Update provider information -----
+
+//On change event to change the update button's value to match the selected provider's ID
+$('#show-selected').change(async () => {
+    const providerIdValue = $('#show-selected').val();
+    $('#update').attr('value', providerIdValue);
+})
+
+//Function to click the submit button
 $('#update').click(async (provider) => {
 //Mirroring the provider schema again with the elements associated with the update modal
     const editProvider = {
-        // firstName : $('#first-name-2').val(),
-        // lastName : $('#last-name-2').val(),
-        // providerType : $('#provider-type-2').val(),
-        // specialty : $('#specialty-2').val(),
-        firstName : $('#first-name').val(),
-        lastName : $('#last-name').val(),
-        providerType : $('#provider-type').val(),
-        specialty : $('#specialty').val(),
+        firstName : $('#first-name-2').val(),
+        lastName : $('#last-name-2').val(),
+        providerType : $('#provider-type-2').val(),
+        specialty : $('#specialty-2').val(),
     }
-
-    //Repopulates the form so you can edit the existing information
-    // const firstNameEdit = $('#first-name-2');
-    // const lastNameEdit = $('#last-name-2');
-    // const providerTypeEdit = $('#provider-type-2');
-    // const specialtyEdit = $('#specialty-2')
-
-
-    // firstNameEdit.val(provider.firstName);
-    // lastNameEdit.val(provider.lastName);
-    // providerTypeEdit.val(provider.providerType);
-    // specialtyEdit.val(provider.specialty);
-
     console.log(editProvider);
 
-    //Used to select each provider by their id and to put as the endpoint of the fetch request
-    const providerIdValue = $('#show-selected').val();
-    console.log(providerIdValue)
+    
+    const buttonValue = $('#update').val();
+
 
     //Fetch request for grabbing the data at a certain endpoint
-    const response = await fetch((`${URL}/providers/${providerIdValue}`), {
+    const response = await fetch((`${URL}/providers/${buttonValue}`), {
         method: "put",
         headers: {
             "Content-Type" : "application/json"
@@ -169,11 +161,11 @@ $('#update').click(async (provider) => {
     const data = await response.json()
     console.log(data)
 
-    //This runs the first function again to populate the providers new information in the dropdown menu
-    getProvider();
-
     //Empty options so we don't get duplicate in the dropdown menu
     $('#show-selected').empty();
+
+    //This runs the first function again to populate the providers new information in the dropdown menu
+    getProvider();
 
     //Clears out the form after you click submit
     $('#first-name-2').val("");
@@ -186,17 +178,61 @@ $('#update').click(async (provider) => {
 
 //------------- CREATE - ADDING A NEW COMMENT --------------
 $('#create-comment').click(async () => {
+    //Matching the comments schema. It will be connected to the provider by it's id in the dropdown menu. 
     const newComment = {
         providerid: $('#show-selected').val(),
         comment: $('#comment').val(),
         commenterName: $('#commenter').val()
     }
-    console.log(newComment) //seeing if it grabs the right provider ID
+    console.log(newComment); //seeing if it grabs the right provider ID
 
+    //Fetch request for grabbing the data at comments endpoint
+    const responseComment = await fetch((`${URL}/comments`), {
+        method: "post",
+        headers: {
+            "Content-Type" : "application/json"
+        },
+        body: JSON.stringify(newComment)
+    });
+    console.log(responseComment); //seeing if it grabs the right url
+
+    const dataComment = await responseComment.json();
+    console.log(dataComment); //grabs the right data
+
+
+    //Fetch request for grabbing the data at providers endpoint
+    const providerIdValue = $('#show-selected').val();
+    const responseProvider = await fetch((`${URL}/providers/${providerIdValue}`), {
+        method: "put",
+        headers: {
+            "Content-Type" : "application/json"
+        }
+    });
+    console.log(responseProvider); //seeing if it grabs the right url
+
+    const dataProvider = await responseProvider.json();
+    console.log(dataProvider);
+
+    //Push the new comment and their name into the comment array
+    dataComment.comment.forEach((comment) => {
+        dataProvider.comments.push(comment);
+        const $deleteButton = $("<button>").text('DELETE');
+        $('.comment-to-delete').append($("<button>"));
+        ($deleteButton).attr("type", "button")
+    })
 })
 
+///////////////////////////////////////////////////////////////////////////////////////
 
+//------------- DELETE - ADDING A NEW COMMENT --------------
+// const deleteComment = async (event) => {
 
+//     const response = await fetch(`${URL}/rat/${event.target.id}`, {
+//       method: "delete"
+//     })
+    
+//   }
+  
 
 
 

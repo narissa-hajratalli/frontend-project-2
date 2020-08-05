@@ -71,10 +71,10 @@ For the frontend application, I plan to have a list of facts relating to discrim
 | Learn Bootstrap and use for CSS build  | 6 hrs | H | 1.5 hrs  | -hr |
 | Cross-browser responsiveness | 6 hrs | H | -hr  | -hr |
 | Hamburger | 2 hrs | H | -hr  | -hr |
-| Button to add a comment (create) | 1.5 hrs | H | -hr  | -hr |
+| Button to add a comment (create) | 1.5 hrs | H | 2 hrs | -hr |
 | Button to add provider information (create) | 1.5 hrs | 4 hrs | -hr  | -hr |
 | Dropdown menu containing list of providers (read) | 3 hrs | H | 6 hrs  | -hr |
-| Button to update provider information, but not a previous comment (update) | 3 hrs | H | 3.5 hrs  | -hr |
+| Button to update provider information, but not a previous comment (update) | 3 hrs | H | 5 hrs  | -hr |
 | Button to delete your previous comment, but keeps provider information in the database (delete) | 1.5 hrs | H | -hr  | -hr |
 | Deployment | 30 mins | H | -hr  | -hr |
 | Total | 37.5 hrs | -hr | -hr | -hr |
