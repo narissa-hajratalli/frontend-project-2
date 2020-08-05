@@ -34,6 +34,9 @@ const getProvider = async () => {
         const $option = $('<option>').attr("value", provider._id).text(`${provider.firstName} ${provider.lastName}, ${provider.providerType}`);
         $providerSelect.append($option);
     });
+
+    //This empties out the div containg the provider information
+    $('#provider-info-ul').empty();
     
 };
 
@@ -99,29 +102,36 @@ $('#submit').click(async () => {
             "Content-Type" : "application/json"
         },
         body: JSON.stringify(newProvider)
-    })
-
+    });
     console.log(response);
 
-    const data = await response.json()
-    console.log(data)
+    const data = await response.json();
+    console.log(data);
+
     //This runs the first function again to populate the providers in the dropdown menu
     getProvider();
 
     //Empty options so we don't get duplicate in the dropdown menu
     $('#show-selected').empty();
+
+    // $('#update-Modal').modal('close')
     
 })
+
 ///////////////////////////////////////////////////////////////////////////////////////
 
 //---- UPDATE - Update provider information -----
 $('#update').click(async (provider) => {
 //Mirroring the provider schema again with the elements associated with the update modal
     const editProvider = {
-        firstName : $('#first-name-2').val(),
-        lastName : $('#last-name-2').val(),
-        providerType : $('#provider-type-2').val(),
-        specialty : $('#specialty-2').val(),
+        // firstName : $('#first-name-2').val(),
+        // lastName : $('#last-name-2').val(),
+        // providerType : $('#provider-type-2').val(),
+        // specialty : $('#specialty-2').val(),
+        firstName : $('#first-name').val(),
+        lastName : $('#last-name').val(),
+        providerType : $('#provider-type').val(),
+        specialty : $('#specialty').val(),
     }
 
     //Repopulates the form so you can edit the existing information
@@ -138,8 +148,12 @@ $('#update').click(async (provider) => {
 
     console.log(editProvider);
 
+    //Used to select each provider by their id and to put as the endpoint of the fetch request
+    const providerIdValue = $('#show-selected').val();
+    console.log(providerIdValue)
+
     //Fetch request for grabbing the data at a certain endpoint
-    const response = await fetch((`${URL}/providers/${$('#show-selected').val()}`), {
+    const response = await fetch((`${URL}/providers/${providerIdValue}`), {
         method: "put",
         headers: {
             "Content-Type" : "application/json"
@@ -150,11 +164,18 @@ $('#update').click(async (provider) => {
 
     const data = await response.json()
     console.log(data)
+
     //This runs the first function again to populate the providers in the dropdown menu
     getProvider();
 
     //Empty options so we don't get duplicate in the dropdown menu
     $('#show-selected').empty();
+
+    //Clears out the form after you click submit
+    $('#first-name').val("");
+    $('#last-name').val("");
+    $('#provider-type').val("");
+    $('#specialty').val("")
 })
 
 
@@ -162,3 +183,7 @@ $('#update').click(async (provider) => {
 // Main Application Logic
 ////////////////////////////////
 getProvider() //showing providers in the dropdown menu
+
+
+// initializes modal package
+// $('.modal').modal()
