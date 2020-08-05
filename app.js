@@ -72,16 +72,25 @@ $('#find-button').click(async () => {
     $('#provider-info-ul').append($medicaid);
     
     //Looping over the keys in the 'comments' object
-    data.comments.forEach((comment) => {
-        const $comment = $('<li>').text(`${comment.comment} -${comment.commenterName}`);
-        console.log(comment)
+    data.comments.forEach((comment, i) => {
+        const $comment = $('<li>').text(`${comment.comment} -${comment.commenterName}`).attr('value', comment._id);
+
         $comment.addClass('comment-to-delete')
+
+        console.log(data)
+
+        $('#delete-button').attr("value", data.comments._id)
+        // console.log(data._id)
+        const $deleteButton = $("<button>").text('Delete').addClass("btn btn-danger").attr('type','button').attr('id','delete-button').attr('value', commen._id)
+        $(".comment-to-delete").eq(i).append($deleteButton)
+        
+        console.log(comment)
         $('#provider-info-ul').append($comment)
     })
 
-    //Adding delete buttons next to each comment
-    $(".comment-to-delete").append($("<button>").text('Delete').addClass("btn btn-danger").attr('type','button').attr('id','delete-button'))
-
+     //Adding delete buttons next to each comment
+    //  $(".comment-to-delete")
+    
 
     // console.log($firstName)
     // console.log(data.firstName)
@@ -136,6 +145,7 @@ $('#submit').click(async () => {
 $('#show-selected').change(async () => {
     const providerIdValue = $('#show-selected').val();
     $('#update').attr('value', providerIdValue);
+    console.log($('#update').val())
 })
 
 //Function to click the submit button
@@ -150,7 +160,7 @@ $('#update').click(async () => {
     }
     console.log(editProvider);
 
-    
+
     const updateButtonValue = $('#update').val();
 
 
@@ -205,6 +215,8 @@ $('#create-comment').click(async () => {
     const dataComment = await responseComment.json();
     console.log(dataComment); //grabs the right data
 
+    console.log(newComment.providerid)
+
 
     //Fetch request for grabbing the data at providers endpoint
     const providerIdValue = $('#show-selected').val();
@@ -232,10 +244,28 @@ $('#create-comment').click(async () => {
 
 //------------- DELETE - ADDING A NEW COMMENT --------------
 
-//On change event to change the delete button's value to match the selected provider's ID
+//API call to get the comment ids to populate with each comment
+// const getComment = async () => {
+//     //API call
+//     const response = await fetch(`${URL}/comments`); //Setting response to the provider route
+//     const data = await response.json(); //grabbing the JSON data
+
+//     //Looping through all the comments in the data set
+//     data.forEach((comment) => {
+//         $('.comment-to-delete').attr("value", comment._id)
+//     });
+
+//     //This empties out the div containg the provider information
+//     // $('#provider-info-ul').empty();
+    
+// };
+
+
+//On change event to change the delete button's value to match the comment's id
 // $('#show-selected').change(async () => {
 //     const providerIdValue = $('#show-selected').val();
 //     $('#delete-button').attr('value', providerIdValue);
+//     console.log($('#delete-button').val())
 // })
 
 //Function to delete the comment
@@ -249,18 +279,14 @@ $('#delete-button').click( async () => {
     })
     
     getProvider() 
-  })
+})
   
-
-
-
 
 
 ////////////////////////////////
 // Main Application Logic
 ////////////////////////////////
 getProvider() //showing providers in the dropdown menu
-
 
 // initializes modal package
 // $('.modal').modal()
