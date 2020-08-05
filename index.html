@@ -153,11 +153,50 @@
 <!------------------------------------------------------------------------------------------>
 
 
+<!------------------------------------------------------------------------------------------>
+<!---------------------- CREATE - ADD A NEW COMMENT -------------->
+<div id="update-provider">
+  
+  <!--HEADING-->
+  <h5>Experienced discrimination? Select a provider from the dropdown menu and add a comment</h5>
 
+  <!-- BUTTON TRIGGER MODAL -->
+  <button type="button" class="btn btn-info data-toggle="modal" data-target="#comment-Modal">
+    Report Bias
+</button>
 
+  <!-- MODAL -->
+      <div class="modal fade" id="comment-Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div id="add-comment">
+                <label for="comment">Comment</label>
+                <input id="comment" type="text" class="validate">
+              </div>
+              <div id="add-commenter">
+                <label for="commenter">Commenter Name (put "Anonymous" if you wish)</label>
+                <input id="commenter" type="text" class="validate">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="create-comment">Add comment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--------------------- END ADD COMMENT ---------------->
+<!------------------------------------------------------------------------------------------>
 
-<!---------------------- BUTTON FOR ADDING JUST A NEW COMMENT ------>
-
+<!------------------------------------------------------------------------------------------>
 <!---------------------- BUTTON FOR DELETING A COMMENT ------------>
 
 

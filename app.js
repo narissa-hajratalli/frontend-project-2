@@ -182,7 +182,6 @@ $('#update').click(async (provider) => {
     $('#specialty-2').val("")
 })
 
-
 ////////////////////////////////
 // Main Application Logic
 ////////////////////////////////
