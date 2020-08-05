@@ -33,7 +33,7 @@
     <div class="search-form">
           <input type="hidden" name=name id="show-provider-dropdown"/>
               <select name="provider" id="show-selected">
-                  <option selected=“selected” disabled=“disabled” value=“none”>Select Provider</option>
+                  <option selected=“selected” disabled=“disabled” selected disabled value=“none”>Select Provider</option>
               </select>
           <h5>Find Patient Reviews</h5>
           <button id="find-button" type="button" class="btn btn-primary">Find Reviews</button>
@@ -155,13 +155,13 @@
 
 <!------------------------------------------------------------------------------------------>
 <!---------------------- CREATE - ADD A NEW COMMENT -------------->
-<div id="update-provider">
+<div id="add-comment">
   
   <!--HEADING-->
   <h5>Experienced discrimination? Select a provider from the dropdown menu and add a comment</h5>
 
   <!-- BUTTON TRIGGER MODAL -->
-  <button type="button" class="btn btn-info data-toggle="modal" data-target="#comment-Modal">
+  <button type="button" class="btn btn-info" data-toggle="modal" data-target="#comment-Modal">
     Report Bias
 </button>
 
@@ -170,7 +170,7 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <h5 class="modal-title" id="exampleModalLabel">Report an incident of discrimination</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>

@@ -182,6 +182,26 @@ $('#update').click(async (provider) => {
     $('#specialty-2').val("")
 })
 
+///////////////////////////////////////////////////////////////////////////////////////
+
+//------------- CREATE - ADDING A NEW COMMENT --------------
+$('#create-comment').click(async () => {
+    const newComment = {
+        providerid: $('#show-selected').val(),
+        comment: $('#comment').val(),
+        commenterName: $('#commenter').val()
+    }
+    console.log(newComment) //seeing if it grabs the right provider ID
+
+})
+
+
+
+
+
+
+
+
 ////////////////////////////////
 // Main Application Logic
 ////////////////////////////////
