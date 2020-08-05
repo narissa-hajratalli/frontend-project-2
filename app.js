@@ -22,7 +22,7 @@ const $submit = $('#submit')
 //FUNCTIONS
 /////////////////////////////
 
-//DROPDOWN MENU - Getting providers from API to populate in the dropdown menu
+//------DROPDOWN MENU - Getting providers from API to populate in the dropdown menu-----
 const getProvider = async () => {
     //API call
     const response = await fetch(`${URL}/providers`); //Setting response to the provider route
@@ -77,14 +77,14 @@ $('#find-button').click(async (providerData) => {
     // console.log($firstName)
     // console.log(data.firstName)
 })
+///////////////////////////////////////////////////////////////////////////////////////
 
 //------------- CREATE - ADDING A NEW PROVIDER --------------
 
 //Function for adding a new provider when the "Submit" button is pressed
-$('#submit').click(async (provider) => {
-    $('#show-provider-dropdown').empty()
-
-    //Object containing all new provider information that is input
+$('#submit').click(async () => {
+    //This is an object mirroring the provider schema. Each key is an element in the provider schema 
+    //and I'm setting it equal to the input value that will be put on the form
     const newProvider = {
         firstName : $('#first-name').val(),
         lastName : $('#last-name').val(),
@@ -105,8 +105,56 @@ $('#submit').click(async (provider) => {
 
     const data = await response.json()
     console.log(data)
-
+    //This runs the first function again to populate the providers in the dropdown menu
     getProvider();
+
+    //Empty options so we don't get duplicate in the dropdown menu
+    $('#show-selected').empty();
+    
+})
+///////////////////////////////////////////////////////////////////////////////////////
+
+//---- UPDATE - Update provider information -----
+$('#update').click(async (provider) => {
+//Mirroring the provider schema again with the elements associated with the update modal
+    const editProvider = {
+        firstName : $('#first-name-2').val(),
+        lastName : $('#last-name-2').val(),
+        providerType : $('#provider-type-2').val(),
+        specialty : $('#specialty-2').val(),
+    }
+
+    //Repopulates the form so you can edit the existing information
+    const firstNameEdit = $('#first-name-2');
+    const lastNameEdit = $('#last-name-2');
+    const providerTypeEdit = $('#provider-type-2');
+    const specialtyEdit = $('#specialty-2')
+
+
+    firstNameEdit.val(provider.firstName);
+    lastNameEdit.val(provider.lastName);
+    providerTypeEdit.val(provider.providerType);
+    specialtyEdit.val(provider.specialty);
+
+    console.log(editProvider);
+
+    //Fetch request for grabbing the data at a certain endpoint
+    const response = await fetch((`${URL}/providers/${$('#show-selected').val()}`), {
+        method: "put",
+        headers: {
+            "Content-Type" : "application/json"
+        },
+        body: JSON.stringify(editProvider)
+    })
+    console.log(response)
+
+    const data = await response.json()
+    console.log(data)
+    //This runs the first function again to populate the providers in the dropdown menu
+    getProvider();
+
+    //Empty options so we don't get duplicate in the dropdown menu
+    $('#show-selected').empty();
 })
 
 

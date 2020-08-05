@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Color of Care</title>
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.js"
-      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-      crossorigin="anonymous"
-      defer></script>
+
+    <!------- jQuery ------>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous" defer></script>
+
+    <!------- JavaScript file ------>
     <script src="app.js" defer></script>
+
+    <!------- CSS file------>
     <link rel="stylesheet" href="style.css"/>
+
+    <!------- Bootstrap ------>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
@@ -20,35 +25,43 @@
 
 <!-------NAVIGATION BAR------>
 
+<!------------------------------------------------------------------------------------------>
 <!----------READ - SHOW INDIVIDUAL PROVIDERS WHEN CHOSEN FROM THE DROPDOWN------>
   <!----------DROPDOWN------>  
+  <!--Reference 1: https://www.sitepoint.com/community/t/can-i-give-a-title-to-the-select-tag/6902/2--> 
+    <!--Used to add "Select Provider" dumby data-->
     <div class="search-form">
-        <h3>Search Providers and Add a Comment</h3>
-            <input type="hidden" name=name id="show-provider-dropdown"/>
-                <select name="provider" id="show-selected">
-                    <option>--Find Reviews--</option>
-                </select>
-            <button id="find-button">Find Reviews</button>
+          <input type="hidden" name=name id="show-provider-dropdown"/>
+              <select name="provider" id="show-selected">
+                  <option selected=“selected” disabled=“disabled” value=“none”>Select Provider</option>
+              </select>
+          <h5>Find Patient Reviews</h5>
+          <button id="find-button" type="button" class="btn btn-primary">Find Reviews</button>
     </div>
   <!----------THIS IS WHERE THE PROVIDER INFO WILL BE SHOWN------>
     <div id="provider-info">
       <ul id="provider-info-ul"></ul>
     </div>
+  <!---------- END READ DROPDOWN -------------------------------------------->
+ <!------------------------------------------------------------------------------------------>
 
+
+
+<!------------------------------------------------------------------------------------------>
 <!------------------- CREATE - MODAL FOR CREATING A NEW PROVIDER ------------------->
 <!--Source: https://getbootstrap.com/docs/4.0/components/modal/ -->
-  <div id="report-bias">
+<div id="create-provider">
   
   <!--HEADING-->
     <h5>Don't see a provider? Add a new one</h5>
 
   <!-- BUTTON TRIGGER MODAL -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#create-Modal">
         Add provider
     </button>
 
   <!-- MODAL -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="create-Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -84,10 +97,64 @@
       </div>
     </div>
 <!------------------- END MODAL FOR CREATING A NEW PROVIDER ------------------->
+<!------------------------------------------------------------------------------------------>
+
+
+<!------------------------------------------------------------------------------------------>
+<!--------------------- UPDATE - MODAL FOR UPDATING PROVIDERS ---------------->
+<div id="update-provider">
+  
+  <!--HEADING-->
+  <h5>See your provider? Incorrect Information? Update their info below.</h5>
+
+  <!-- BUTTON TRIGGER MODAL -->
+  <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#update-Modal">
+    Update Info
+</button>
+
+  <!-- MODAL -->
+      <div class="modal fade" id="update-Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Update below</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div id="first-name-edit">
+                <label for="first-name-2">First Name</label>
+                <input id="first-name-2" type="text" class="validate">
+              </div>
+              <div id="last-name-edit">
+                <label for="last-name-2">Last Name</label>
+                <input id="last-name-2" type="text" class="validate">
+              </div>
+              <div id="provider-type-edit">
+                <label for="provider-type-2">Provider Type (MD, PA, Nurse, etc.)</label>
+                <input id="provider-type-2" type="text" class="validate">
+              </div>
+              <div id="specialty-edit">
+                <label for="specialty-2">Specialty</label>
+                <input id="specialty-2" type="text" class="validate">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="update">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--------------------- END PROVIDER UPDATING ---------------->
+<!------------------------------------------------------------------------------------------>
 
 
 
-<!--------------------- BUTTON FOR EDITING PROVIDERS ---------------->
+
 
 <!---------------------- BUTTON FOR ADDING JUST A NEW COMMENT ------>
 
