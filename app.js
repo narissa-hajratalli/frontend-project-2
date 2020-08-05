@@ -114,7 +114,11 @@ $('#submit').click(async () => {
     //Empty options so we don't get duplicate in the dropdown menu
     $('#show-selected').empty();
 
-    // $('#update-Modal').modal('close')
+    //Clears out the form after you click submit
+    $('#first-name').val("");
+    $('#last-name').val("");
+    $('#provider-type').val("");
+    $('#specialty').val("")
     
 })
 
@@ -135,16 +139,16 @@ $('#update').click(async (provider) => {
     }
 
     //Repopulates the form so you can edit the existing information
-    const firstNameEdit = $('#first-name-2');
-    const lastNameEdit = $('#last-name-2');
-    const providerTypeEdit = $('#provider-type-2');
-    const specialtyEdit = $('#specialty-2')
+    // const firstNameEdit = $('#first-name-2');
+    // const lastNameEdit = $('#last-name-2');
+    // const providerTypeEdit = $('#provider-type-2');
+    // const specialtyEdit = $('#specialty-2')
 
 
-    firstNameEdit.val(provider.firstName);
-    lastNameEdit.val(provider.lastName);
-    providerTypeEdit.val(provider.providerType);
-    specialtyEdit.val(provider.specialty);
+    // firstNameEdit.val(provider.firstName);
+    // lastNameEdit.val(provider.lastName);
+    // providerTypeEdit.val(provider.providerType);
+    // specialtyEdit.val(provider.specialty);
 
     console.log(editProvider);
 
@@ -165,17 +169,17 @@ $('#update').click(async (provider) => {
     const data = await response.json()
     console.log(data)
 
-    //This runs the first function again to populate the providers in the dropdown menu
+    //This runs the first function again to populate the providers new information in the dropdown menu
     getProvider();
 
     //Empty options so we don't get duplicate in the dropdown menu
     $('#show-selected').empty();
 
     //Clears out the form after you click submit
-    $('#first-name').val("");
-    $('#last-name').val("");
-    $('#provider-type').val("");
-    $('#specialty').val("")
+    $('#first-name-2').val("");
+    $('#last-name-2').val("");
+    $('#provider-type-2').val("");
+    $('#specialty-2').val("")
 })
 
 
