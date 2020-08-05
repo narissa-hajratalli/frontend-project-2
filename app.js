@@ -45,7 +45,7 @@ const getProvider = async () => {
 //----READ - Getting provider info and their comments to show on the screen when you click the "Find Provider" button-----
 
 //Function for the "Find Provider" button click
-$('#find-button').click(async () => {
+const findButton = async () => {
     //Defining variables for this function
     const providerIdValue = $('#show-selected').val();
 
@@ -80,13 +80,29 @@ $('#find-button').click(async () => {
 
         console.log(data)
 
-        $('#delete-button').attr("value", data.comments._id)
+        // $('.delete-button').attr("value", data.comments._id)
         // console.log(data._id)
+
         const $deleteButton = $("<button>").text('Delete').addClass("btn btn-danger delete-button").attr('type','button').attr('value', comment._id)
+        $deleteButton.click( async () => {
+            console.log('hi')
+            const deleteButtonValue = $deleteButton.val();
+            console.log(deleteButtonValue)
+        
+            const response = await fetch(`${URL}/comments/${deleteButtonValue}`, {
+              method: "delete"
+            })
+
+            findButton()
+        })
+
         $(".comment-to-delete").eq(i).append($deleteButton)
         
         console.log(comment)
     })
+}
+
+    $('#find-button').click(findButton)
 
      //Adding delete buttons next to each comment
     //  $(".comment-to-delete")
@@ -94,7 +110,7 @@ $('#find-button').click(async () => {
 
     // console.log($firstName)
     // console.log(data.firstName)
-})
+
 
 ///////////////////////////////////////////////////////////////////////////////////////
 

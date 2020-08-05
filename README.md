@@ -7,7 +7,7 @@
 |Day 1| Project Description | Complete
 |Day 1| Wireframes / Priority Matrix / Timeline `backend` and `frontend`| Complete
 |Day 2| Working RestAPI | Complete
-|Day 3| Core Application Structure (HTML, CSS, etc.) | Incomplete
+|Day 3| Core Application Structure (HTML, CSS, etc.) | Complete
 |Day 4| MVP & Bug Fixes | Incomplete
 |Day 5| Final Touches and Present | Incomplete
 
@@ -28,9 +28,9 @@ For the frontend application, I plan to have a list of facts relating to discrim
 | --- | :---: |  :---: | 
 | Day 1: Thurs, July 30th | Project Proposal | Complete | 8hr |
 | Day 2: Fri, July 31st, 2020 | Research & Development	| Incomplete	| 2 hrs |
-| Day 3: Sat, August 1st, 2020 | Backend: Build server & create Mongoose models | Complete | 3 hrs |
+| Day 3: Sat, August 1st, 2020 | Backend: Build server & create Mongoose models | Complete | 5 hrs |
 | Day 4: Sun, August 2nd, 2020 | Backend: Complete backend, deployment, and test with Postman | Complete | 8 hrs |
-| Day 5: Mon, August 3rd, 2020 | Backend: Basic frontend build & have frontend consume API | Incomplete | |
+| Day 5: Mon, August 3rd, 2020 | Backend: Basic frontend build & have frontend consume API | Complete | 10 hrs |
 | Day 6: Tues, August 4th, 2020 | Frontend: Frontend build (mobile first) | Incomplete | |
 | Day 7: Wed, August 5th, 2020 | Frontend: Hamburger menu and deploy | Incomplete | |
 | Day 8: Tues, August 6th, 2020 | Frontend: Cross-browser testing and final touches  | Incomplete | |
@@ -65,9 +65,9 @@ For the frontend application, I plan to have a list of facts relating to discrim
 #### MVP
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Create frontend with HTML, CSS, and jQuery  | 6 hrs | H | -hr  | -hr |
+| Create frontend with HTML, CSS, and jQuery  | 6 hrs | H | 3 hrs  | -hr |
 | Add list of health disparity facts to the homepage  | 2 hrs | H | -hr  | -hr |
-| Use jQuery and leverage the backend API  | 6 hrs | H | -hr  | -hr |
+| Use jQuery and leverage the backend API  | 6 hrs | H | 10 hrs  | -hr |
 | Learn Bootstrap and use for CSS build  | 6 hrs | H | 1.5 hrs  | -hr |
 | Cross-browser responsiveness | 6 hrs | H | -hr  | -hr |
 | Hamburger | 2 hrs | H | -hr  | -hr |
@@ -75,7 +75,7 @@ For the frontend application, I plan to have a list of facts relating to discrim
 | Button to add provider information (create) | 1.5 hrs | 4 hrs | -hr  | -hr |
 | Dropdown menu containing list of providers (read) | 3 hrs | H | 6 hrs  | -hr |
 | Button to update provider information, but not a previous comment (update) | 3 hrs | H | 5 hrs  | -hr |
-| Button to delete your previous comment, but keeps provider information in the database (delete) | 1.5 hrs | H | 1.5 hrs  | -hr |
+| Button to delete your previous comment, but keeps provider information in the database (delete) | 1.5 hrs | H | 3 hrs  | -hr |
 | Deployment | 30 mins | H | -hr  | -hr |
 | Total | 37.5 hrs | -hr | -hr | -hr |
 
