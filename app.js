@@ -7,7 +7,7 @@
 
 ///////////////////////
 //SET URL SO IT USES DEPLOYED API URL IF IT EXISTS, LOCALHOST IF IT DOESN'T
-const deployedURL = 'https://thecolorofcare.netlify.app/';
+const deployedURL = 'https://thecolorofcare.herokuapp.com';
 const URL = deployedURL ? deployedURL : "http://localhost:3000"; //this is a ternary operator, without a deployedURL we use local host
 
 ///////////////////////
