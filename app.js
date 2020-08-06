@@ -7,7 +7,7 @@
 
 ///////////////////////
 //SET URL SO IT USES DEPLOYED API URL IF IT EXISTS, LOCALHOST IF IT DOESN'T
-const deployedURL = null;
+const deployedURL = 'https://thecolorofcare.netlify.app/';
 const URL = deployedURL ? deployedURL : "http://localhost:3000"; //this is a ternary operator, without a deployedURL we use local host
 
 ///////////////////////
@@ -83,6 +83,9 @@ const findButton = async () => {
         // $('.delete-button').attr("value", data.comments._id)
         // console.log(data._id)
 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //------------- DELETE - Removing a comment --------------
+
         const $deleteButton = $("<button>").text('Delete').addClass("btn btn-danger delete-button").attr('type','button').attr('value', comment._id)
         $deleteButton.click( async () => {
             console.log('hi')
@@ -102,7 +105,7 @@ const findButton = async () => {
     })
 }
 
-    $('#find-button').click(findButton)
+$('#find-button').click(findButton)
 
      //Adding delete buttons next to each comment
     //  $(".comment-to-delete")
@@ -255,24 +258,6 @@ $('#create-comment').click(async () => {
     $('#comment').val("");
     $('#commenter').val("");
 })
-
-///////////////////////////////////////////////////////////////////////////////////////
-
-//------------- DELETE - ADDING A NEW COMMENT --------------
-
-//Function to delete the comment
-$('.delete-button').click( async () => {
-    console.log('hi')
-    // const deleteButtonValue = $('.delete-button').val();
-    // console.log(deleteButtonValue)
-
-    // const response = await fetch(`${URL}/rat/${deleteButtonValue}`, {
-    //   method: "delete"
-    // })
-})
-
-const deleteButtonValue = $('.delete-button').val();
-    console.log(deleteButtonValue)
 
 
 ////////////////////////////////
