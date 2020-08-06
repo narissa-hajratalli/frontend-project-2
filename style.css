@@ -5,9 +5,12 @@ font-family: 'Nothing You Could Do', cursive; */
 
 
 /* * {
-    border: 1px solid black;
+    
 } */
 
+html {
+    scroll-behavior: smooth;
+  }
 
 a:link {
     color: white;
@@ -25,10 +28,11 @@ a:link {
 
 body {
     /* background-image: url(https://res.cloudinary.com/ds7vqqwb8/image/upload/v1596727317/Project%202%20-%20CRUD%20Application/131391-light-blue-polygon-pattern-abstract-background_1_gzffcu.jpg); */
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
-    font-family: Antic Slab', serif ;
+    background-size: cover; */
+    font-family: Antic Slab, serif;
+    background-color: #000000;
 }
 
 #title {
@@ -54,6 +58,18 @@ body {
     margin-top: 2em;
     margin-bottom: 2em;
     padding: 2em;
+}
+
+.nav-item {
+    font-size: 30px;
+    padding-right: 4vw;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
 }
 
 .collapse {
