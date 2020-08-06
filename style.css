@@ -1,18 +1,56 @@
-* {
+/* * {
     border: 1px solid black;
-}
+} */
 
 h1 {
     text-align: center;
+    padding: 10px 10px 8px;
 }
 
 
 .navbar {
     text-align: center;
     list-style-type: none;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 2em;
 }
 
 #provider-info-ul {
     list-style-type: none;
     text-align: center
 }
+
+#show-selected {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.container {
+    display: inline
+}
+
+#dropdown-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.jumbotron {
+    /* background: url('http://placekitten.com/800/500') no-repeat center center; */
+    /* background-size: cover; */
+    margin-top: 3em;
+    margin-left: 3em;
+    margin-right: 3em;
+    border-radius: 30%;
+    text-align: center;
+    /* display: inline; */
+  }
+
+  .jumbotron-container {
+      display: flex;
+      flex-direction: row;
+      margin-left: 3em;
+      margin-right: 3em;
+      flex-wrap: wrap;
+  }

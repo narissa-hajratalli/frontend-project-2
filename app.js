@@ -194,7 +194,7 @@ $('#update').click(async () => {
     console.log(response)
 
     const data = await response.json()
-    console.log(data)
+    // console.log(data)
 
     //Empty options so we don't get duplicate in the dropdown menu
     $('#show-selected').empty();
@@ -236,6 +236,8 @@ $('#create-comment').click(async () => {
 
     console.log(newComment.providerid)
 
+    $('#comment').val("");
+    $('#commenter').val("");
 
     //Fetch request for grabbing the data at providers endpoint
     const providerIdValue = $('#show-selected').val();
@@ -255,8 +257,6 @@ $('#create-comment').click(async () => {
         dataProvider.comments.push(comment);
     })
 
-    $('#comment').val("");
-    $('#commenter').val("");
 })
 
 
