@@ -51,16 +51,16 @@ const findButton = async () => {
 
     //Fetch request for grabbing the data at a certain endpoint
     const response = await fetch(`${URL}/providers/${providerIdValue}`);
-    console.log(response);
+    // console.log(response);
 
     //Defining the data
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
 
     const $picture = $('<li>').text(data.picture)
     const $title = $('<li>').text(`${data.firstName} ${data.lastName}, ${data.providerType}`);
     const $specialty =  $('<li>').text(data.specialty);
-    const $medicaid =  $('<li>').text(`Accepts Medicaid: ${data.acceptsMedicaid}`);
+    // const $medicaid =  $('<li>').text(`Accepts Medicaid: ${data.acceptsMedicaid}`); <- Post MVP
 
     //Empties the div so we don't have duplicate provider information on the screen
     $('#provider-info-ul').empty();
@@ -69,7 +69,7 @@ const findButton = async () => {
     $('#provider-info-ul').append($picture);
     $('#provider-info-ul').append($title);
     $('#provider-info-ul').append($specialty);
-    $('#provider-info-ul').append($medicaid);
+    // $('#provider-info-ul').append($medicaid); <- Post MVP
     
     //Looping over the keys in the 'comments' object
     data.comments.forEach((comment, i) => {
@@ -78,19 +78,13 @@ const findButton = async () => {
 
         $comment.addClass('comment-to-delete')
 
-        console.log(data)
-
-        // $('.delete-button').attr("value", data.comments._id)
-        // console.log(data._id)
-
     ///////////////////////////////////////////////////////////////////////////////////////
     //------------- DELETE - Removing a comment --------------
 
         const $deleteButton = $("<button>").text('Delete').addClass("btn btn-danger delete-button").attr('type','button').attr('value', comment._id)
         $deleteButton.click( async () => {
-            console.log('hi')
             const deleteButtonValue = $deleteButton.val();
-            console.log(deleteButtonValue)
+            // console.log(deleteButtonValue)
         
             const response = await fetch(`${URL}/comments/${deleteButtonValue}`, {
               method: "delete"
@@ -101,18 +95,11 @@ const findButton = async () => {
 
         $(".comment-to-delete").eq(i).append($deleteButton)
         
-        console.log(comment)
+        // console.log(comment)
     })
 }
 
 $('#find-button').click(findButton)
-
-     //Adding delete buttons next to each comment
-    //  $(".comment-to-delete")
-    
-
-    // console.log($firstName)
-    // console.log(data.firstName)
 
 
 ///////////////////////////////////////////////////////////////////////////////////////
@@ -138,10 +125,10 @@ $('#submit').click(async () => {
         },
         body: JSON.stringify(newProvider)
     });
-    console.log(response);
+    // console.log(response);
 
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
 
     //This runs the first function again to populate the providers in the dropdown menu
     getProvider();
@@ -164,7 +151,7 @@ $('#submit').click(async () => {
 $('#show-selected').change(async () => {
     const providerIdValue = $('#show-selected').val();
     $('#update').attr('value', providerIdValue);
-    console.log($('#update').val())
+    // console.log($('#update').val())
 })
 
 //Function to click the submit button
@@ -177,7 +164,7 @@ $('#update').click(async () => {
         providerType : $('#provider-type-2').val(),
         specialty : $('#specialty-2').val(),
     }
-    console.log(editProvider);
+    // console.log(editProvider);
 
 
     const updateButtonValue = $('#update').val();
@@ -191,7 +178,7 @@ $('#update').click(async () => {
         },
         body: JSON.stringify(editProvider)
     })
-    console.log(response)
+    // console.log(response)
 
     const data = await response.json()
     // console.log(data)
@@ -219,7 +206,7 @@ $('#create-comment').click(async () => {
         comment: $('#comment').val(),
         commenterName: $('#commenter').val()
     }
-    console.log(newComment); //seeing if it grabs the right provider ID
+    // console.log(newComment); //seeing if it grabs the right provider ID
 
     //Fetch request for grabbing the data at comments endpoint
     const responseComment = await fetch((`${URL}/comments`), {
@@ -229,12 +216,12 @@ $('#create-comment').click(async () => {
         },
         body: JSON.stringify(newComment)
     });
-    console.log(responseComment); //seeing if it grabs the right url
+    // console.log(responseComment); //seeing if it grabs the right url
 
     const dataComment = await responseComment.json();
-    console.log(dataComment); //grabs the right data
+    // console.log(dataComment); //grabs the right data
 
-    console.log(newComment.providerid)
+    // console.log(newComment.providerid)
 
     $('#comment').val("");
     $('#commenter').val("");
@@ -247,10 +234,10 @@ $('#create-comment').click(async () => {
             "Content-Type" : "application/json"
         }
     });
-    console.log(responseProvider); //seeing if it grabs the right url
+    // console.log(responseProvider); //seeing if it grabs the right url
 
     const dataProvider = await responseProvider.json();
-    console.log(dataProvider);
+    // console.log(dataProvider);
 
     //Push the new comment and their name into the comment array
     dataComment.comment.forEach((comment) => {
