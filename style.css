@@ -4,11 +4,6 @@ font-family: 'Caveat', cursive;
 font-family: 'Nothing You Could Do', cursive; */
 
 
-/* * {
-    
-} */
-
-
 html {
     scroll-behavior: smooth;
   }
@@ -24,7 +19,7 @@ a:visited {
   
   /* mouse over link */
 a:hover {
-    color: #b3e0ff;
+    color:teal;
   }
 
 body {
@@ -43,6 +38,9 @@ body {
 .section-headings {
     font-family: 'Antic Slab', serif;
     text-align: center;
+    font-size: 2em;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
 }
 
 #dx {
@@ -86,6 +84,10 @@ li .nav-item {
 
 #dropdown-container {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
 
 #dropdown-title {
@@ -93,15 +95,15 @@ li .nav-item {
 }
 
 #provider-info {
-    /* border: 1px solid black; */
     margin: .5em;
+    text-align: center;
     
 }
 
 #provider-info-ul {
-    list-style-type: none;
-    text-align: center;
+    list-style: none;
     font-size: 1em;
+    margin-top: 10px;
 }
 
 #show-selected {
@@ -154,7 +156,6 @@ li .nav-item {
   .resource {
     font-family: 'Caveat', cursive;
     font-size: 1vw;
-    color: white;
   }
 
   #facts-section {
@@ -162,6 +163,13 @@ li .nav-item {
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  #resources-section {
+      background-color: #3F9EBD;
+      opacity: 0.3;
+      text-align: center;
+      padding: 10px;
   }
 
  
