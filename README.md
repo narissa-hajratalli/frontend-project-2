@@ -101,9 +101,26 @@ For the frontend application, I plan to have a list of facts relating to discrim
 ## Code Snippets
 
 
-#### 
-```
+#### Creating the function that populates the dropdown menu with all the providers - I used a forEach loop to append different options to the dropdown menu containing the provider's name and provider type. This step was crucial for my project because I also set the value of each provider in the dropdown menu equal to their ID in the database. This made it possible to associate each provider with different on click events for my different CRUD operations. 
 
+```
+//------DROPDOWN MENU - Getting providers from API to populate in the dropdown menu-----
+const getProvider = async () => {
+    //API call
+    const response = await fetch(`${URL}/providers`); //Setting response to the provider route
+    const data = await response.json(); //grabbing the JSON data
+
+    //Populate each selector in the dropdown menu with retrieved data
+    //Looping through all the providers in the data set
+    data.forEach((provider) => {
+        const $option = $('<option>').attr("value", provider._id).text(`${provider.firstName} ${provider.lastName}, ${provider.providerType}`);
+        $providerSelect.append($option);
+    });
+
+    //This empties out the div containg the provider information
+    $('#provider-info-ul').empty();
+    
+};
 ```
 
 
@@ -111,7 +128,63 @@ For the frontend application, I plan to have a list of facts relating to discrim
  
  
 #### 
-Issue: 
+Issue: The delete buttons were not working to delete comments.
+
+Resolution: I added the delete function directly into the read function and called the function immediately after the function. This was difficult because the logic was hard to follow and I received a lot of help from my team lead. 
+
 ```
+//----READ - Getting provider info and their comments to show on the screen when you click the "Find Provider" button-----
+
+//Function for the "Find Provider" button click
+const findButton = async () => {
+    //Defining variables for this function
+    const providerIdValue = $('#show-selected').val();
+
+    //Fetch request for grabbing the data at a certain endpoint
+    const response = await fetch(`${URL}/providers/${providerIdValue}`);
+
+    //Defining the data
+    const data = await response.json();
+
+    const $picture = $('<li>').text(data.picture)
+    const $title = $('<li>').text(`${data.firstName} ${data.lastName}, ${data.providerType}`);
+    const $specialty =  $('<li>').text(data.specialty);
+    // const $medicaid =  $('<li>').text(`Accepts Medicaid: ${data.acceptsMedicaid}`); <- Post MVP
+
+    //Empties the div so we don't have duplicate provider information on the screen
+    $('#provider-info-ul').empty();
+    
+    //Appending items
+    $('#provider-info-ul').append($picture);
+    $('#provider-info-ul').append($title);
+    $('#provider-info-ul').append($specialty);
+    // $('#provider-info-ul').append($medicaid); <- Post MVP
+    
+    //Looping over the keys in the 'comments' object
+    data.comments.forEach((comment, i) => {
+        const $comment = $('<li>').text(`${comment.comment} -${comment.commenterName}`).attr('value', comment._id);
+        $('#provider-info-ul').append($comment)
+
+        $comment.addClass('comment-to-delete')
+
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //------------- DELETE - Removing a comment --------------
+
+        const $deleteButton = $("<button>").text('Delete').addClass("btn btn-danger delete-button").attr('type','button').attr('value', comment._id)
+        $deleteButton.click( async () => {
+            const deleteButtonValue = $deleteButton.val();
+        
+            const response = await fetch(`${URL}/comments/${deleteButtonValue}`, {
+              method: "delete"
+            })
+
+            findButton()
+        })
+
+        $(".comment-to-delete").eq(i).append($deleteButton)
+    })
+}
+
+$('#find-button').click(findButton)
 
 ```
