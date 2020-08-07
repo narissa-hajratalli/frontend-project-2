@@ -30,7 +30,7 @@ For the frontend application, I plan to have a list of facts relating to discrim
 |Deliverable	| Status	| Time Spent |
 | --- | :---: |  :---: | 
 | Day 1: Thurs, July 30th | Project Proposal | Complete | 8hr |
-| Day 2: Fri, July 31st, 2020 | Research & Development	| Incomplete	| 2 hrs |
+| Day 2: Fri, July 31st, 2020 | Research & Development	| Complete	| 2 hrs |
 | Day 3: Sat, August 1st, 2020 | Backend: Build server & create Mongoose models | Complete | 6 hrs |
 | Day 4: Sun, August 2nd, 2020 | Backend: Complete backend, deployment, and test with Postman | Complete | 8 hrs |
 | Day 5: Mon, August 3rd, 2020 | Backend: Basic frontend build & have frontend consume API | Complete | 10 hrs |
