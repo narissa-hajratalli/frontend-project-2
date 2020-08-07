@@ -79,6 +79,7 @@ For the frontend application, I plan to have a list of facts relating to discrim
 | Deployment | 30 mins | H | 2 hrs  | 2 hrs |
 | Total | - | 37.5 hrs | 48 hrs | 48 hrs |
 
+
 #### Post MVP
 | Component | Estimated Time | Priority | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
@@ -88,3 +89,29 @@ For the frontend application, I plan to have a list of facts relating to discrim
 | Have a "last edited" section for each provider's profile so users know if information is up to date | 1.5 hrs | L | -hr | -hr |
 | Include mental health resources and resources to report biases | 1.5 hrs | L | 1 hr | -hr |
 | Total | - | 9.5 hr | 1.25 hr | 1.25 hrs |
+
+## Additional Libraries
+ - jQuery: Used to connect the backend database with the frontend HTML and CSS. 
+ 
+ - Bootstrap: Used for the hamburger menu, navigation bar, and overall website styling
+ 
+ - Google Fonts: Used to add different font families to the application to make it more aesthetically pleasing.
+ 
+
+## Code Snippets
+
+
+#### 
+```
+
+```
+
+
+## Issues and Resolutions
+ 
+ 
+#### 
+Issue: 
+```
+
+```
