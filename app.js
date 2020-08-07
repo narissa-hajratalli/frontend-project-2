@@ -51,11 +51,9 @@ const findButton = async () => {
 
     //Fetch request for grabbing the data at a certain endpoint
     const response = await fetch(`${URL}/providers/${providerIdValue}`);
-    // console.log(response);
 
     //Defining the data
     const data = await response.json();
-    // console.log(data);
 
     const $picture = $('<li>').text(data.picture)
     const $title = $('<li>').text(`${data.firstName} ${data.lastName}, ${data.providerType}`);
@@ -84,7 +82,6 @@ const findButton = async () => {
         const $deleteButton = $("<button>").text('Delete').addClass("btn btn-danger delete-button").attr('type','button').attr('value', comment._id)
         $deleteButton.click( async () => {
             const deleteButtonValue = $deleteButton.val();
-            // console.log(deleteButtonValue)
         
             const response = await fetch(`${URL}/comments/${deleteButtonValue}`, {
               method: "delete"
@@ -94,8 +91,6 @@ const findButton = async () => {
         })
 
         $(".comment-to-delete").eq(i).append($deleteButton)
-        
-        // console.log(comment)
     })
 }
 
@@ -125,10 +120,8 @@ $('#submit').click(async () => {
         },
         body: JSON.stringify(newProvider)
     });
-    // console.log(response);
 
     const data = await response.json();
-    // console.log(data);
 
     //This runs the first function again to populate the providers in the dropdown menu
     getProvider();
@@ -151,7 +144,6 @@ $('#submit').click(async () => {
 $('#show-selected').change(async () => {
     const providerIdValue = $('#show-selected').val();
     $('#update').attr('value', providerIdValue);
-    // console.log($('#update').val())
 })
 
 //Function to click the submit button
@@ -164,8 +156,6 @@ $('#update').click(async () => {
         providerType : $('#provider-type-2').val(),
         specialty : $('#specialty-2').val(),
     }
-    // console.log(editProvider);
-
 
     const updateButtonValue = $('#update').val();
 
@@ -178,10 +168,8 @@ $('#update').click(async () => {
         },
         body: JSON.stringify(editProvider)
     })
-    // console.log(response)
 
     const data = await response.json()
-    // console.log(data)
 
     //Empty options so we don't get duplicate in the dropdown menu
     $('#show-selected').empty();
@@ -206,7 +194,6 @@ $('#create-comment').click(async () => {
         comment: $('#comment').val(),
         commenterName: $('#commenter').val()
     }
-    // console.log(newComment); //seeing if it grabs the right provider ID
 
     //Fetch request for grabbing the data at comments endpoint
     const responseComment = await fetch((`${URL}/comments`), {
@@ -216,12 +203,8 @@ $('#create-comment').click(async () => {
         },
         body: JSON.stringify(newComment)
     });
-    // console.log(responseComment); //seeing if it grabs the right url
 
     const dataComment = await responseComment.json();
-    // console.log(dataComment); //grabs the right data
-
-    // console.log(newComment.providerid)
 
     $('#comment').val("");
     $('#commenter').val("");
@@ -234,10 +217,8 @@ $('#create-comment').click(async () => {
             "Content-Type" : "application/json"
         }
     });
-    // console.log(responseProvider); //seeing if it grabs the right url
 
     const dataProvider = await responseProvider.json();
-    // console.log(dataProvider);
 
     //Push the new comment and their name into the comment array
     dataComment.comment.forEach((comment) => {
