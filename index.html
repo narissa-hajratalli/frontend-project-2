@@ -30,7 +30,7 @@
 
 <!-------NAVIGATION BAR------>
 <!--Reference 1: https://getbootstrap.com/docs/4.0/components/navbar/-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light col-12">
+<nav class="navbar navbar-expand-sm navbar-light bg-light col-12">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -40,13 +40,13 @@
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li> -->
       <li class="nav-item">
-        <a class="nav-link" href="#">Find Reviews</a>
+        <a class="nav-link" href="#startfind">Find Reviews</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Know the Facts</a>
+        <a class="nav-link" href="#startfacts">Know the Facts</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Resources for POC</a>
+        <a class="nav-link" href="#startresources">Resources for POC</a>
       </li>
 </nav>
 
@@ -55,20 +55,20 @@
   <!----------DROPDOWN------>  
   <!--Reference 1: https://www.sitepoint.com/community/t/can-i-give-a-title-to-the-select-tag/6902/2--> 
     <!--Used to add "Select Provider" dumby data-->
-  <div id="dropdown-container">
+  <a name="startfind" class="target1"><div id="dropdown-container">
     <div class="search-form dropdown">
           <input type="hidden" name=name id="show-provider-dropdown"/>
               <select name="provider" id="show-selected">
                   <option selected=“selected” disabled=“disabled” selected disabled value=“none” id='dropdown-title'>Select Provider</option>
               </select>
-          <h5>Find Patient Reviews</h5>
+          <h5 class="section-headings">Find Patient Reviews</h5>
           <button id="find-button" type="button" class="btn btn-primary">Find Reviews</button>
     </div>
   <!----------THIS IS WHERE THE PROVIDER INFO WILL BE SHOWN------>
     <div id="provider-info" class="animated fadeIn">
       <ul id="provider-info-ul"></ul>
     </div>
-  </div>
+  </div></a>
   <!---------- END READ DROPDOWN -------------------------------------------->
  <!------------------------------------------------------------------------------------------>
 
@@ -77,8 +77,8 @@
 <!------------------- CREATE - MODAL FOR CREATING A NEW PROVIDER ------------------->
 <!--Source: https://getbootstrap.com/docs/4.0/components/modal/ -->
   <!--This is a div for all the crud operations-->
-<div class="jumbotron-container"> 
-<div class="jumbotron jumbotron-fluid col-3 rounded">
+  <div class="jumbotron-container">
+<div class="jumbotron jumbotron-fluid rounded">
   <div class="container">
     <div id="create-provider">
   
@@ -134,7 +134,7 @@
 
 <!------------------------------------------------------------------------------------------>
 <!--------------------- UPDATE - MODAL FOR UPDATING PROVIDERS ---------------->
-<div class="jumbotron jumbotron-fluid col-3 rounded">
+<div class="jumbotron jumbotron-fluid rounded">
   <div class="container">
   <div id="update-provider">
   
@@ -191,7 +191,7 @@
 
 <!------------------------------------------------------------------------------------------>
 <!---------------------- CREATE - ADD A NEW COMMENT -------------->
-<div class="jumbotron jumbotron-fluid col-3 rounded">
+<div class="jumbotron jumbotron-fluid rounded">
   <div class="container">
   <div id="add-comment">
   
@@ -241,8 +241,8 @@
 <!--------------------- CAROUSEL FOR FACTS ---------------->
 <!-- Resource 1: https://getbootstrap.com/docs/4.0/components/carousel/-->
   <!-- Basic bootstrap carousel build -->
-<div id="facts-section">
-<h4 class="section-headings">Know the Facts</h4></br>
+<a name="startfacts" class="target2"><div id="facts-section">
+<h5 class="section-headings">Know the Facts</h5></br>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -252,9 +252,9 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img class="d-block w-100" src="https://res.cloudinary.com/ds7vqqwb8/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1596732921/Project%202%20-%20CRUD%20Application/Abstract-Geometric-Background-Blue_ri7kx1.jpg" alt="First slide">
-        <div class="carousel-caption d-none d-md-block">
+        <div class="carousel-caption">
         <h5 class="fact">"Black women are three to four times more likely to experience a pregnancy-related death than white women."</h5>
-        <p class="resource"><a href="https://res.cloudinary.com/ds7vqqwb8/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1596732921/Project%202%20-%20CRUD%20Application/Abstract-Geometric-Background-Blue_ri7kx1.jpg">Source: Black Women's Maternal Health:
+        <p class="resource"><a href="https://www.nationalpartnership.org/our-work/resources/health-care/maternity/black-womens-maternal-health-issue-brief.pdf">Source: Black Women's Maternal Health:
           A Multifaceted Approach to
           Addressing Persistent and Dire
           Health Disparities</a></p>
@@ -262,17 +262,18 @@
     </div>
 
     <div class="carousel-item">
-      <img class="d-block w-100" src="https://res.cloudinary.com/ds7vqqwb8/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1596732921/Project%202%20-%20CRUD%20Application/Abstract-Geometric-Background-Blue_ri7kx1.jpg" alt="First slide">
-        <div class="carousel-caption d-none d-md-block">
+      <img class="w-100" src="https://res.cloudinary.com/ds7vqqwb8/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1596732921/Project%202%20-%20CRUD%20Application/Abstract-Geometric-Background-Blue_ri7kx1.jpg" alt="First slide">
+        <div class="carousel-caption">
         <h5 class="fact">"The chronic stress induced by personal experiences with discrimination is one mechanism by which institutional racism may affect health"</h5>
-        <p class="resource"><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3244674/">Source: Racism in Healthcare: Its Relationship to Shared Decision-Making and Health Disparities</a></p>
+        <h5 class="resource"><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3244674/">Source: Racism in Healthcare: Its Relationship to Shared Decision-Making and Health Disparities</a></h5>
     </div>
   </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="https://res.cloudinary.com/ds7vqqwb8/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1596732921/Project%202%20-%20CRUD%20Application/Abstract-Geometric-Background-Blue_ri7kx1.jpg" alt="Third slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="https://res.cloudinary.com/ds7vqqwb8/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1596732921/Project%202%20-%20CRUD%20Application/Abstract-Geometric-Background-Blue_ri7kx1.jpg" alt="Fourth slide">
+      <img class="d-block w-100" src="https://res.cloudinary.com/ds7vqqwb8/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1596732921/Project%202%20-%20CRUD%20Application/Abstract-Geometric-Background-Blue_ri7kx1.jpg" alt="First slide">
+        <div class="carousel-caption">
+        <h5 class="fact">"Half of white medical trainees believe such myths as black people have thicker skin or less sensitive nerve endings than white people."</h5>
+        <p class="resource"><a href="https://www.aamc.org/news-insights/how-we-fail-black-patients-pain">Source: Black Women's Maternal Health:
+          How we fail black patients in pain/a></p>
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -284,7 +285,14 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-</div>
+</div></a>
+
+<!------------------------------------------------------------------------------------------>
+<!---------RESOURCES---------->
+  <a name="startfind" class="target3">
+    <div id="resources">
+      <h5 class="section-headings">Resources</h5>
+    </div></a>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
