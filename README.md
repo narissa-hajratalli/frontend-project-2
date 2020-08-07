@@ -101,7 +101,8 @@ For the frontend application, I plan to have a list of facts relating to discrim
 ## Code Snippets
 
 
-#### Creating the function that populates the dropdown menu with all the providers - I used a forEach loop to append different options to the dropdown menu containing the provider's name and provider type. This step was crucial for my project because I also set the value of each provider in the dropdown menu equal to their ID in the database. This made it possible to associate each provider with different on click events for my different CRUD operations. 
+#### Creating the function that populates the dropdown menu with all the providers 
+I used a forEach loop to append different options to the dropdown menu containing the provider's name and provider type. This step was crucial for my project because I also set the value of each provider in the dropdown menu equal to their ID in the database. This made it possible to associate each provider with different on click events for my different CRUD operations. 
 
 ```
 //------DROPDOWN MENU - Getting providers from API to populate in the dropdown menu-----
