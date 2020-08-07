@@ -8,7 +8,7 @@
 |Day 1| Wireframes / Priority Matrix / Timeline `backend` and `frontend`| Complete
 |Day 2| Working RestAPI | Complete
 |Day 3| Core Application Structure (HTML, CSS, etc.) | Complete
-|Day 4| MVP & Bug Fixes | Incomplete
+|Day 4| MVP & Bug Fixes | Complete
 |Day 5| Final Touches and Present | Incomplete
 
 ## Project Description
@@ -63,28 +63,28 @@ For the frontend application, I plan to have a list of facts relating to discrim
 ## Functional Components
 
 #### MVP
-| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
+| Component | Estimated Time | Priority | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Create frontend with HTML, CSS, and jQuery  | 6 hrs | H | 3 hrs  | -hr |
-| Add list of health disparity facts to the homepage  | 2 hrs | H | -hr  | -hr |
-| Use jQuery and leverage the backend API  | 6 hrs | H | 10 hrs  | -hr |
-| Learn Bootstrap and use for CSS build  | 6 hrs | H | 1.5 hrs  | -hr |
-| Cross-browser responsiveness | 6 hrs | H | -hr  | -hr |
-| Hamburger | 2 hrs | H | -hr  | -hr |
-| Button to add a comment (create) | 1.5 hrs | H | 2 hrs | -hr |
-| Button to add provider information (create) | 1.5 hrs | 4 hrs | -hr  | -hr |
-| Dropdown menu containing list of providers (read) | 3 hrs | H | 6 hrs  | -hr |
-| Button to update provider information, but not a previous comment (update) | 3 hrs | H | 5 hrs  | -hr |
-| Button to delete your previous comment, but keeps provider information in the database (delete) | 1.5 hrs | H | 3 hrs  | -hr |
-| Deployment | 30 mins | H | -hr  | -hr |
-| Total | 37.5 hrs | -hr | -hr | -hr |
+| Create frontend with HTML, CSS, and jQuery  | 6 hrs | H | 9 hrs  | 9 hrs |
+| Add list of health disparity facts to the homepage  | 2 hrs | H | 2 hrs  | 2 hrs |
+| Use jQuery and leverage the backend API  | 6 hrs | H | 10 hrs  | 10 hrs |
+| Learn Bootstrap and use for CSS build  | 6 hrs | H | 3 hrs | 3 hrs |
+| Cross-browser responsiveness | 6 hrs | H | 2 hrs  | 2 hrs |
+| Hamburger | 2 hrs | H | 30 min  | 30 min |
+| Button to add a comment (create) | 1.5 hrs | H | 2 hrs | 2 hrs |
+| Button to add provider information (create) | 1.5 hrs | H | 4 hrs  | 4 hrs |
+| Dropdown menu containing list of providers (read) | 3 hrs | H | 6 hrs  | 6 hrs |
+| Button to update provider information, but not a previous comment (update) | 3 hrs | H | 5 hrs  | 5 hrs |
+| Button to delete your previous comment, but keeps provider information in the database (delete) | 1.5 hrs | H | 3 hrs  | 3 hrs |
+| Deployment | 30 mins | H | 2 hrs  | 2 hrs |
+| Total | - | 37.5 hrs | 48 hrs | 48 hrs |
 
 #### Post MVP
-| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
+| Component | Estimated Time | Priority | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Empty page to render provider information | 3 hrs | M | -hr | -hr |
-| Softscroll on the webpage | 1.5 hrs | M | -hr | -hr |
+| Softscroll on the webpage | 1.5 hrs | M | 25 mins | -hr |
 | Have comments section have a timestamp so users know what date a comment was submitted | 2 hrs | M | -hr | -hr |
 | Have a "last edited" section for each provider's profile so users know if information is up to date | 1.5 hrs | L | -hr | -hr |
-| Include mental health resources and resources to report biases | 1.5 hrs | L | -hr | -hr |
-| Total | 9.5 hrs | -hr | -hr | -hr |
+| Include mental health resources and resources to report biases | 1.5 hrs | L | 1 hr | -hr |
+| Total | - | 9.5 hr | 1.25 hr | 1.25 hrs |
