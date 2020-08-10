@@ -12,7 +12,7 @@ https://thecolorofcare.netlify.app/
 |Day 2| Working RestAPI | Complete
 |Day 3| Core Application Structure (HTML, CSS, etc.) | Complete
 |Day 4| MVP & Bug Fixes | Complete
-|Day 5| Final Touches and Present | Incomplete
+|Day 5| Final Touches and Present | Complete
 
 ## Project Description
 The purpose of this project is to create a full CRUD application to review different healthcare providers. The user will have the opportunity to report acts of discrimination they've experienced from providers through comments and those comments will be stored in a database and mapped to each provider. The inspiration for this appliaction is that People of Color are, statistically, overlooked by providers and experience discrimination in the healthcare industry.
@@ -37,7 +37,7 @@ For the frontend application, I plan to have a list of facts relating to discrim
 | Day 6: Tues, August 4th, 2020 | Frontend: Frontend build (mobile first) | Complete | 9 hrs |
 | Day 7: Wed, August 5th, 2020 | Frontend: Hamburger menu and deploy | Complete | 3 hrs |
 | Day 8: Tues, August 6th, 2020 | Frontend: Cross-browser testing and final touches  | Complete | 4 hrs |
-| Day 9: Tues, August 7th, 2020 | Presentation | Incomplete | |
+| Day 9: Tues, August 7th, 2020 | Presentation | Complete | - |
 
 ## MVP/Post MVP
 
